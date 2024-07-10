@@ -1,10 +1,10 @@
-#PLAYER NAME
+#PLAYERS
 player1 = input("Enter player 1 name : ")
 player2 = input("Enter player 2 name : ")
 
-#GENERAL RULES
 
-#GENERAL VARIABLES
+
+#RULES
 board = {1:-1, 2:-1, 3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 9:-1}
 win = [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[3,5,7],[1,5,9]]
 count = 0
@@ -12,7 +12,7 @@ chance = 0
 completed = 0
 check = 0
 
-#ANALYZING THE BOARD
+#BOARD ANALYZING
 def analyze():
     for j in range(0,8):
         if(board[win[j][0]]==0 and board[win[j][0]]==board[win[j][1]] and board[win[j][0]]==board[win[j][2]]):
@@ -20,7 +20,7 @@ def analyze():
         elif(board[win[j][0]]==1 and board[win[j][0]]==board[win[j][1]] and board[win[j][0]]==board[win[j][2]]):
             return 10
 
-#GAME BOARD
+#BOARD
 def Board():
     print("-------------")
     for i in range (1,10):
@@ -40,7 +40,7 @@ def Board():
 
 
 
-#GAME PLAY
+#MOVE
 def player(move):
     if board[move]!=-1:
         return -1
